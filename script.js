@@ -1,0 +1,55 @@
+// Select elements with DOM Manipulation
+let pButton = document.getElementById("p-button");
+let imgButton = document.getElementById("img-button");
+
+let pDiv = document.getElementById("p-div");
+let imgDiv = document.getElementById("img-div");
+
+let pCount = document.getElementById("p-count");
+let imgCount = document.getElementById("img-count");
+let nothingCount = document.getElementById("nothing-count");
+
+
+// Function to add Text+Stylize
+function addText(){
+    // Show/Hide each of the Div's to prevent overlap
+    imgDiv.style.display = "none";
+    pDiv.style.display = "block";
+
+    // Create a new p element
+    let newPTag = document.createElement("p")
+
+    // Add style to the text
+    newPTag.innerText = "Hot chocolate is bad today"
+    newPTag.style.backgroundColor = "black";
+    newPTag.style.padding = "10px";
+    newPTag.style.color = "white";
+
+    // Add the newPTag to the imgDiv
+    pDiv.appendChild(newPTag);
+}
+
+// FUnction to add new Image
+function addImage(){
+
+    // Show/Hide each of the Div's to prevent overlap
+    pDiv.style.display = "none";
+    imgDiv.style.display = "block";
+
+    // Create a new img element
+    let newImgTag = document.createElement("img");
+
+    // Add source+style to the Image
+    newImgTag.src = "pikachu.png";
+    newImgTag.style.width = "50px";
+    newImgTag.style.height = "50px";
+
+    // Add the new img to the imgDiv
+    imgDiv.appendChild(newImgTag);
+}
+
+// Event Listener to hear for clicks
+pButton.addEventListener("click", addText)
+
+// Event listener to hear for clicks
+imgButton.addEventListener("click", addImage)
