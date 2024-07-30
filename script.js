@@ -57,7 +57,7 @@ function addImage(){
     let newImgTag = document.createElement("img");
 
     // Add source+style to the Image
-    newImgTag.src = "pikachu.png";
+    newImgTag.src = "leonardo.png";
     newImgTag.style.width = "50px";
     newImgTag.style.height = "50px";
 
